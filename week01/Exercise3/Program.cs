@@ -4,24 +4,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        int radomNumber = 1;
+        Random rng = new Random();
+        int randomNumber = rng.Next(1, 101);
         int guess = 0;
         
-        Console.Write("What is the magic number? ");
-        string givenNumber = Console.ReadLine();
-        radomNumber = int.Parse(givenNumber);
-        
-        while (guess != radomNumber)
+        while (guess != randomNumber)
         {
             Console.Write("What is your guess? ");
             string guesString = Console.ReadLine();
             guess = int.Parse(guesString);
 
-            if (guess < radomNumber)
+            if (guess < randomNumber)
             {
                 Console.WriteLine("Higher");
             }
-            else if (guess > radomNumber)
+            else if (guess > randomNumber)
             {
                 Console.WriteLine("Lower");
             }

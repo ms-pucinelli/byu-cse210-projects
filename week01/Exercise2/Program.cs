@@ -8,26 +8,38 @@ class Program
         string gradeString = Console.ReadLine();
         int grade = int.Parse(gradeString);
 
+        string gradeLetter = ""
+
         if (grade >= 90)
         {
-            Console.WriteLine("Your grade is A. Congratulations!");
+            gradeLetter = "A";
         } 
         else if (grade >= 80)
         {
-            Console.WriteLine("Your grade is B.");
+            gradeLetter = "B";
         }
         else if (grade >= 70)
         {
-            Console.WriteLine(" Your grade is C.");
+            gradeLetter = "C";
         } 
         else if (grade >= 60)
         {
-            Console.WriteLine("Your grade is D. Good luck next time.");
+            gradeLetter = "D";
         }
         else if (grade < 60)
         {
-            Console.WriteLine("Your grade is F. Good luck next time.");
+            gradeLetter = "F";
         }
+
+        Console.WriteLine($"Your Grade is {gradeLetter}");
         
+        if (grade >= 70)
+        {
+            Console.WriteLine("Pass");
+        }
+        else
+        {
+            Console.WriteLine("Fail");
+        }
     }
 }
